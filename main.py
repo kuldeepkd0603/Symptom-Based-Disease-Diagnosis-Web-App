@@ -20,6 +20,7 @@ diets = pd.read_csv("Data/diets.csv")
 
 
 svc = pickle.load(open('model/svc.pkl','rb'))
+unique_sympton = pickle.load(open('model/unique_sympton.pkl','rb'))
 
 
 def helper(dis):
@@ -46,6 +47,7 @@ diseases_list = {15: 'Fungal infection', 4: 'Allergy', 16: 'GERD', 9: 'Chronic c
 def get_predicted_value(patient_symptoms):
     input_vector = np.zeros(len(symptoms_dict))
     for item in patient_symptoms:
+        item=item.lower()
         input_vector[symptoms_dict[item]] = 1
     return diseases_list[svc.predict([input_vector])[0]]
 
