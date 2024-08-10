@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, jsonify  # Import jsonify
+from flask import Flask, request, render_template, jsonify  
 import numpy as np
 import pandas as pd
 
@@ -69,7 +69,7 @@ def home():
         # print(mysysms)
         print(symptoms)
         if symptoms =="Symptoms":
-            message = "Please either write symptoms or you have written misspelled symptoms"
+            message = "Please either write symptoms or you have written misspelled symptom"
             return render_template('index.html', message=message)
         else:
 
