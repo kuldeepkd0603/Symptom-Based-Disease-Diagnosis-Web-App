@@ -3,38 +3,88 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="container my-4 mt-4">
-
-<h4>      Contact Us
-</h4>
-<p>Have questions or need assistance? We're here to help!
-</p>
-<h4>Customer Support
-</h4>
-<p>Our dedicated customer support team is available to assist you with any inquiries or issues you may have. Whether it's a technical question, feedback, or a general inquiry, we're just a message away.
-</p>
-<h4>Get in Touch
-</h4>
-<p>Feel free to reach out to us via email or through the contact form below. We value your feedback and are committed to providing you with the best possible experience.
-</p>
-<p><b>Email:</b> kuldeepverma9755@gmail.com</p>
-<p><b>Phone:</b> +919993285900</p>
-
-
-<h4>Stay Connected</h4>
-<p>Stay up-to-date with the latest news, updates, and health tips by following us on social media. Connect with us on Facebook or Instagram to join our growing community.
-</p>
-<h4>Location
-</h4>
-<p>Dewas,Madhya Pradesh</p>
-
-
-
+  <body class="bg-gray-100">
+    <nav class="bg-gray-800 p-4 ">
+      <div class="container mx-auto flex justify-between items-center">
+          <div class="flex items-center">
+              <img class="w-10 h-10 rounded-full border-2 border-gray-300" src="https://marketplace.canva.com/EAE8eSD-Zyo/1/0/1600w/canva-blue%2C-white-and-green-medical-care-logo-oz1ox2GedbU.jpg" alt="Logo">
+              <a href="#" class="text-white text-xl font-bold ml-2">Health Center</a>
+          </div>
+          <button id="hamburger" class="md:hidden block text-gray-300 focus:outline-none">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+          </button>
+          <div id="navLinks" class="hidden md:flex space-x-6">
+              <a href="/templates/index.html" class="text-gray-300 hover:text-white">Home</a>
+              <a href="/templates/about.html" class="text-gray-300 hover:text-white">About</a>
+              <a href="/templates/blog.html" class="text-gray-300 hover:text-white">Blog</a>
+              <a href="/templates/developer.html" class="text-gray-300 hover:text-white">Developer</a>
+          </div>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden bg-gray-700">
+        <a href="/templates/index.html" class="text-gray-300 hover:text-white">Home</a>
+        <a href="/templates/about.html" class="text-gray-300 hover:text-white">About</a>
+        <a href="/templates/blog.html" class="text-gray-300 hover:text-white">Blog</a>
+        <a href="/templates/developer.html" class="text-gray-300 hover:text-white">Developer</a>
+      </div>
+  </nav>
+    <div class="container mx-auto  p-8 bg-white shadow-lg rounded-lg border border-gray-200">
+      <h2 class="text-4xl font-bold text-center text-blue-600 mb-8">Contact Us</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div class="space-y-6 border border-gray-300 rounded-xl p-6">
+          <h4 class="text-2xl font-semibold text-gray-800 mb-4">Customer Support</h4>
+          <p class="text-gray-600 leading-relaxed">
+            Our dedicated customer support team is available to assist you with any inquiries or issues you may have. Whether it's a technical question, feedback, or a general inquiry, we're just a message away.
+          </p>
+          <h4 class="text-2xl font-semibold text-gray-800 mb-4">Get in Touch</h4>
+          <p class="text-gray-600 leading-relaxed">
+            Feel free to reach out to us via email or through the contact form below. We value your feedback and are committed to providing you with the best possible experience.
+          </p>
+          <p class="text-gray-700 mb-2"><strong>Email:</strong> <a href="mailto:kuldeepverma9755@gmail.com" class="text-blue-600 hover:underline">kuldeepverma9755@gmail.com</a></p>
+          <p class="text-gray-700"><strong>Phone:</strong> +91 999 328 5900</p>
+        </div>
+        <div>
+          <h4 class="text-2xl font-semibold text-gray-800 mb-4">Contact Form</h4>
+          <form action="#" method="post" class="space-y-4">
+            <div>
+              <label for="name" class="block text-gray-700">Name</label>
+              <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700">Email</label>
+              <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+            </div>
+            <div>
+              <label for="message" class="block text-gray-700">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition duration-300">Send Message</button>
+          </form>
+        </div>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="container mx-auto text-center">
+        <p class="">&copy; 2024 HealthCenter. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const navLinks = document.getElementById('navLinks');
+
+      hamburger.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', (event) => {
+          if (!mobileMenu.contains(event.target) && !hamburger.contains(event.target)) {
+              mobileMenu.classList.add('hidden');
+          }
+      });
+  </script>
   </body>
 </html>

@@ -3,45 +3,100 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog Post</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Symptom-Based Disease Diagnosis Web App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="container my-4 mt-4">
+  <body class="bg-gray-100">
+    <nav class="bg-gray-800 p-4">
+      <div class="container mx-auto flex justify-between items-center">
+          <div class="flex items-center">
+              <img class="w-10 h-10 rounded-full border-2 border-gray-300" src="https://marketplace.canva.com/EAE8eSD-Zyo/1/0/1600w/canva-blue%2C-white-and-green-medical-care-logo-oz1ox2GedbU.jpg" alt="Logo">
+              <a href="#" class="text-white text-xl font-bold ml-2">Health Center</a>
+          </div>
+          <button id="hamburger" class="md:hidden block text-gray-300 focus:outline-none">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+          </button>
+          <div id="navLinks" class="hidden md:flex space-x-6">
+             <a href="/templates/index.html" class="text-gray-300 hover:text-white">Home</a>
+              <a href="/templates/about.html" class="text-gray-300 hover:text-white">About</a>
+              <a href="/templates/contact.html" class="text-gray-300 hover:text-white">Contact</a>
+              <a href="/templates/developer.html" class="text-gray-300 hover:text-white">Developer</a>
+          </div>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden bg-gray-700">
+         <a href="/templates/index.html" class="text-gray-300 hover:text-white">Home</a>
+          <a href="/templates/about.html" class="text-gray-300 hover:text-white">About</a>
+          <a href="/templates/contact.html" class="text-gray-300 hover:text-white">Contact</a>
+          <a href="/templates/developer.html" class="text-gray-300 hover:text-white">Developer</a>
+      </div>
+  </nav>
+    <section class="bg-gradient-to-r from-green-400 to-blue-500  text-white py-16">
+      <div class="container mx-auto text-center">
+        <h1 class="text-5xl font-extrabold mb-4">Building a Symptom-Based Disease Diagnosis Web App</h1>
+        <p class="text-xl mb-6">Leverage Flask and Machine Learning to identify potential illnesses based on symptoms.</p>
+        <a href="#learn-more" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100">Learn More</a>
+      </div>
+    </section>
+    <div class="container mx-auto p-8 bg-white shadow-lg rounded-lg border border-gray-200 ">
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-6 text-center">Building a Symptom-Based Disease Diagnosis Web App with Flask and Machine Learning</h2>
+      
+      <p class="text-gray-700 mb-6">
+        In the age of technology and information, access to accurate and timely healthcare is more critical than ever. With the increasing importance of remote healthcare solutions, we embarked on a journey to develop a symptom-based disease diagnosis web application. Leveraging Flask for the backend and a Decision Tree Classifier model, we created a user-friendly platform that can help users identify potential illnesses based on their reported symptoms.
+      </p>
 
-        <h2 class="text-center"> Building a Symptom-Based Disease Diagnosis Web App with Flask and Machine Learning</h2>
-        <p>In the age of technology and information, access to accurate and timely healthcare is more critical than ever. With the increasing importance of remote healthcare solutions, we embarked on a journey to develop a symptom-based disease diagnosis web application. Leveraging Flask for the backend and a Decision Tree Classifier model, we created a user-friendly platform that can help users identify potential illnesses based on their reported symptoms.</p>
+      <h3 class="text-3xl font-semibold text-gray-900 mb-4">The Problem</h3>
+      <p class="text-gray-700 mb-6">
+        The project began with recognizing a common issue: people often experience symptoms and want quick answers about their health concerns. It can be challenging to differentiate between various diseases, especially when symptoms overlap. Our goal was to provide a convenient solution for users to input their symptoms and receive potential diagnoses.
+      </p>
 
-        <h3>The Problem</h3>
-        <p>The project began with recognizing a common issue: people often experience symptoms and want quick answers about their health concerns. It can be challenging to differentiate between various diseases, especially when symptoms overlap. Our goal was to provide a convenient solution for users to input their symptoms and receive potential diagnoses.</p>
+      <h3 class="text-3xl font-semibold text-gray-900 mb-4">The Solution</h3>
+      <p class="text-gray-700 mb-6">
+        We developed a web app that allows users to enter a list of symptoms they are experiencing. The app then uses a pre-trained Decision Tree Classifier model to predict the most likely disease based on the provided symptoms. Here's how it works:
+      </p>
 
-        <h3>The Solution</h3>
-        <p>We developed a web app that allows users to enter a list of symptoms they are experiencing. The app then uses a pre-trained Decision Tree Classifier model to predict the most likely disease based on the provided symptoms. Here's how it works:</p>
+      <ol class="list-decimal list-inside text-gray-700 mb-6 space-y-4">
+        <li><strong>Symptom Input:</strong> Users enter their symptoms through a user-friendly interface. The web app supports a wide range of symptoms, making it versatile for different scenarios.</li>
+        <li><strong>Machine Learning Model:</strong> We trained a Decision Tree Classifier using a dataset containing symptoms and corresponding diseases. The model is capable of predicting diseases based on input symptoms.</li>
+        <li><strong>Prediction:</strong> The app uses the model to predict the most likely disease, providing users with instant information about potential health concerns.</li>
+        <li><strong>Additional Information:</strong> To enhance user experience, the app also provides additional information about the predicted disease. This includes a description of the disease, recommended precautions, medications, dietary advice, and workout tips.</li>
+      </ol>
 
-        <ol>
-            <li><b><strong>Symptom Input:</strong></b> Users enter their symptoms through a user-friendly interface. The web app supports a wide range of symptoms, making it versatile for different scenarios.</li>
-            <li><b><strong>Machine Learning Model:</strong></b> We trained a Decision Tree Classifier using a dataset containing symptoms and corresponding diseases. The model is capable of predicting diseases based on input symptoms.</li>
-            <li><b><strong>Prediction:</strong></b> The app uses the model to predict the most likely disease, providing users with instant information about potential health concerns.</li>
-            <li><b><strong>Additional Information: </strong></b> To enhance user experience, the app also provides additional information about the predicted disease. This includes a description of the disease, recommended precautions, medications, dietary advice, and workout tips.</li>
+      <h3 class="text-3xl font-semibold text-gray-900 mb-4">Key Features</h3>
+      <ul class="list-disc list-inside text-gray-700 mb-6 space-y-4">
+        <li><strong>User-Friendly Interface:</strong> The web app boasts an intuitive and easy-to-navigate interface, ensuring that users can input their symptoms without any hassle.</li>
+        <li><strong>Accurate Predictions:</strong> Leveraging machine learning, our model provides accurate disease predictions based on the symptoms provided by the user.</li>
+        <li><strong>Comprehensive Information:</strong> In addition to predictions, the app offers comprehensive information about the predicted disease, including descriptions, precautions, medications, diet recommendations, and workout tips.</li>
+        <li><strong>Educational Content:</strong> To empower users with knowledge, the app includes informative blog posts about various health topics.</li>
+      </ul>
 
-        </ol>
+      <h3 class="text-3xl font-semibold text-gray-900 mb-4">Conclusion</h3>
+      <p class="text-gray-700 mb-6">
+        Our Symptom-Based Disease Diagnosis Web App brings the power of machine learning and healthcare information to the fingertips of users. It serves as a valuable resource for individuals looking to gain insights into their health conditions quickly and conveniently. By combining technology and healthcare, we aim to make healthcare more accessible and user-centric.
 
-        <h3>Key Features</h3>
-        <ul type="circle">
-            <li><b><strong>User-Friendly Interface:</strong></b> The web app boasts an intuitive and easy-to-navigate interface, ensuring that users can input their symptoms without any hassle.</li>
-            <li><b><strong>Accurate Predictions:</strong></b> Leveraging machine learning, our model provides accurate disease predictions based on the symptoms provided by the user.</li>
-            <li><b><strong>Comprehensive Information: </strong></b>In addition to predictions, the app offers comprehensive information about the predicted disease, including descriptions, precautions, medications, diet recommendations, and workout tips.</li>
-            <li><b><strong>ducational Content:</strong></b> To empower users with knowledge, the app includes informative blog posts about various health topics.</li>
-        </ul>
 
-        <br>
-
-        <h3>Conclusion</h3>
-        <p>Our Symptom-Based Disease Diagnosis Web App brings the power of machine learning and healthcare information to the fingertips of users. It serves as a valuable resource for individuals looking to gain insights into their health conditions quickly and conveniently. By combining technology and healthcare, we aim to make healthcare more accessible and user-centric.
-
-In an era where remote healthcare solutions are gaining prominence, this project represents a significant step forward in providing accessible and reliable healthcare information to the masses. We hope that this project will contribute to better health awareness and ultimately improve the well-being of individuals worldwide.</p>
-
+        In an era where remote healthcare solutions are gaining prominence, this project represents a significant step forward in providing accessible and reliable healthcare information to the masses. We hope that this project will contribute to better health awareness and ultimately improve the well-being of individuals worldwide.
+      </p>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <footer class="bg-gray-800 text-white p-6">
+      <div class="container mx-auto text-center">
+        <p class="text-sm">&copy; 2024 HealthCenter. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const navLinks = document.getElementById('navLinks');
+  
+      hamburger.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', (event) => {
+          if (!mobileMenu.contains(event.target) && !hamburger.contains(event.target)) {
+              mobileMenu.classList.add('hidden');
+          }
+      });
+  </script>
   </body>
 </html>
